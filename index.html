@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title></title>
+    <style type="text/css">
+      @font-face {
+        font-family: 'Arrival';
+        src: url(https://static.arrival.com/fonts/ARRIVALApercuPro-Light.woff2) format('woff2'),
+          url(https://static.arrival.com/fonts/ARRIVALApercuPro-Light.woff) format('woff');
+        font-weight: 300;
+      }
+
+      @font-face {
+        font-family: 'Arrival Mono';
+        src: url(https://static.arrival.com/fonts/ApercuMonoPro.woff) format('woff');
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        ;
+      }
+
+      h2 {
+        font-size: 36px;
+        line-height: 48px;
+      }
+
+      body {
+        font-size: 20px;
+        line-height: 32px;
+        font-family: 'Arrival';
+        padding: 0;
+        margin: 0;
+        word-wrap: break-word;
+        font-kerning: normal;
+        -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+        -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+        -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+        font-feature-settings: "kern", "liga", "clig", "calt";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        padding-left: 64px;
+        padding-right: 64px;
+        height: 100%;
+      }
+
+      .mainInfoConatiner {
+        position: fixed;
+        width: 45%;
+        height: 100vh;
+        background-color: #1f221e;
+        color: white;
+      }
+
+      .flex {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+      }
+
+      .cardContainer {
+        position: relative;
+        width: 55%;
+        left: 45%;
+      }
+
+      .subheader {
+        font-family: "Arrival Mono";
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      .card {
+        cursor: pointer;
+        position: sticky;
+        background-color: #0c62f3;
+        margin-left: auto;
+        color: white;
+        padding: 64px 64px 43px 64px;
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+      }
+
+      .first {
+        top: 0;
+        height: 85vh;
+      }
+
+      .second {
+        background-color: white;
+        top: 50px;
+        color: rgba(0, 0, 0, 0.9);
+        height: 500px;
+      }
+
+      /* .second:hover {
+        transform: translateY(-50px);
+      } */
+
+      .third {
+        background-color: #0c62f3;
+        top: 100px;
+        height: 85vh;
+      }
+
+      /* .third:hover {
+        transform: translateY(-50px);
+      } */
+
+      .fourth {
+        background-color: white;
+        top: 150px;
+        height: 500px;
+        color: rgba(0, 0, 0, 0.9);
+      }
+
+      /* .fourth:hover {
+        transform: translateY(-50px);
+      } */
+
+      .fifth {
+        background-color: #0c62f3;
+        top: 200px;
+        height: 600px;
+      }
+
+      /* .fixed {
+        position: absolute;
+        top: 42vh;
+        width: 100%;
+      } */
+
+      .selector {
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 1px 12px;
+        border-radius: 37px;
+        font-family: 'Arrival Mono';
+        font-size: 12px;
+        ;
+      }
+
+      .numberOfPeople {
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 14px 8px;
+        position: relative;
+        top: -17px;
+        font-family: 'Arrival Mono';
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      .text {
+        width: 89%;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+
+    <div class="mainInfoConatiner">
+      <div class="container">
+        <div class="flex">
+          <div style="flex: 1 0 auto;">
+            <h2 style="padding-top: 64px; color:rgba(255, 255, 255, 0.3);font-size: 36px;line-height: 48px;">
+              Hi, Avinash! Today, 24 June.
+            </h2>
+            <h2 style="font-size: 36px;line-height: 48px;">
+              You have 3 meetings and 2 updates
+            </h2>
+            <div style="display:flex; flex-wrap:wrap; align-items: center; padding-top: 54px">
+              <div class="selector" style="margin-right: 24px;">Meeting (3)</div>
+              <span style="padding-right: 12px;font-size:12px;font-family: Arrival Mono">Updates:</span>
+              <div class="selector" style="margin-right: 14px;">Presentation</div>
+              <div class="selector" style="margin-right: 14px;">
+                Configuration
+              </div>
+              <div class="selector">Surveys</div>
+            </div>
+
+          </div>
+          <div style="flex: 0 0 auto;">
+            <div style="padding-bottom: 64px; display: flex; align-items: center;">
+              <p style="padding-right:18px;font-size:12px;font-family: Arrival Mono"">Your sales manager</p>
+              <p style=" padding-right:27px;font-size:12px;font-family: Arrival Mono"">Mike Ableson</p>
+              <img src="https://images.ctfassets.net/r0lccig03c53/7qzqTfGYRHfbarMpStBosp/e6425fdcca3ef16e3bea3cfce8198b9b/Rectangle_240644613.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cardContainer">
+      <div class="card first" style="display: flex;
+        flex-direction: column;
+        min-height: 100%;">
+        <div style="display: flex; justify-content: space-between; flex: 1 0 auto;">
+          <div>
+            <p class="subheader">
+              Meeting • 16-01-2020 • Posted 3 mins ago • SalesMan
+            </p>
+            <h2 style="padding-top: 32px;width: 80%;">
+              Meeting in our office about bus
+            </h2>
+            <h2 style="color:rgba(255, 255, 255, 0.3)">
+              17 Mar 2020, 10:30
+            </h2>
+          </div>
+          <div>
+            <img style="width: 44px; height: 66px" src="https://images.ctfassets.net/r0lccig03c53/7qzqTfGYRHfbarMpStBosp/e6425fdcca3ef16e3bea3cfce8198b9b/Rectangle_240644613.jpg" />
+
+          </div>
+        </div>
+        <div style="flex: 0 0 auto;">
+          <p class="text">
+            Hi Ben, it’s Serenity from Arrival. We would love to ask you a few
+            questions if you’re interested in partnership with us.
+          </p>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 36px">
+            <div style="    display: flex;
+            align-items: center;">
+              <img src="https://images.ctfassets.net/r0lccig03c53/53GwoP9CJgi5wXBGKMARK3/d9887c1ffc76521cf6f3b8cb5d62d3cc/Rectangle_240644622.svg" />
+              <span style="color: white; padding-left: 8px">24</span>
+            </div>
+            <div>
+              <img style="width: 32px; height: 40px; margin-right: 8px" src="https://images.ctfassets.net/r0lccig03c53/23wD3eAnJjgRmx2BqJm1br/fcf9ccddcbdd98568f08c71aac33e8a6/Rectangle_240644613.jpg" />
+              <img style="width: 32px; height: 40px; margin-right: 8px" src="https://images.ctfassets.net/r0lccig03c53/23wD3eAnJjgRmx2BqJm1br/fcf9ccddcbdd98568f08c71aac33e8a6/Rectangle_240644613.jpg" />
+              <img style="width: 32px; height: 40px; margin-right: 8px" src="https://images.ctfassets.net/r0lccig03c53/23wD3eAnJjgRmx2BqJm1br/fcf9ccddcbdd98568f08c71aac33e8a6/Rectangle_240644613.jpg" />
+              <img style="width: 32px; height: 40px; margin-right: 8px" src="https://images.ctfassets.net/r0lccig03c53/23wD3eAnJjgRmx2BqJm1br/fcf9ccddcbdd98568f08c71aac33e8a6/Rectangle_240644613.jpg" />
+              <span class="numberOfPeople">10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card second">
+        <p class="subheader">
+          Meeting • 16-01-2020 • Posted 3 mins ago • SalesMan
+        </p>
+        <h1 style="padding-top: 32px;">
+          Configure your bus
+        </h1>
+        <div>
+          <img style="margin: 0 auto; display: block;padding-top: 40px" src="https://images.ctfassets.net/r0lccig03c53/nrJOgoenuhUZyPr1SwJVg/345b568638da8b76fb7fed0eecf06a1d/photo_2019-12-02_11.30_1.jpg" />
+        </div>
+        <p style="text-transform: uppercase; padding-top: 95px;font-family: 'Arrival Mono';font-size: 11px;
+        line-height: 16px;">Launch configurator</p>
+      </div>
+      <div class="card third" style="display: flex;
+        flex-direction: column;
+        min-height: 100%;">
+        <div style="display: flex; justify-content: space-between; flex: 1 0 auto;">
+          <div>
+            <p class="subheader">
+              Meeting • 16-01-2020 • Posted 3 mins ago • SalesMan
+            </p>
+            <h2 style="padding-top: 32px;width: 80%;">
+              Meeting in our office about bus
+            </h2>
+            <h2 style="color:rgba(255, 255, 255, 0.3)">
+              17 Mar 2020, 10:30
+            </h2>
+          </div>
+          <div>
+            <img style="width: 44px; height: 66px" src="https://images.ctfassets.net/r0lccig03c53/7qzqTfGYRHfbarMpStBosp/e6425fdcca3ef16e3bea3cfce8198b9b/Rectangle_240644613.jpg" />
+          </div>
+        </div>
+        <div style="flex: 0 0 auto;">
+          <p class="text">
+            Hi Ben, it’s Serenity from Arrival. We would love to ask you a few
+            questions if you’re interested in partnership with us.
+          </p>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 36px">
+            <div style="    display: flex;
+            align-items: center;">
+              <img src="https://images.ctfassets.net/r0lccig03c53/53GwoP9CJgi5wXBGKMARK3/d9887c1ffc76521cf6f3b8cb5d62d3cc/Rectangle_240644622.svg" />
+              <span style="color: white; padding-left: 8px">24</span>
+            </div>
+            <div>
+              <img style="width: 32px; height: 40px; margin-right: 8px" src="https://images.ctfassets.net/r0lccig03c53/23wD3eAnJjgRmx2BqJm1br/fcf9ccddcbdd98568f08c71aac33e8a6/Rectangle_240644613.jpg" />
+              <img style="width: 32px; height: 40px; margin-right: 8px" src="https://images.ctfassets.net/r0lccig03c53/23wD3eAnJjgRmx2BqJm1br/fcf9ccddcbdd98568f08c71aac33e8a6/Rectangle_240644613.jpg" />
+              <img style="width: 32px; height: 40px; margin-right: 8px" src="https://images.ctfassets.net/r0lccig03c53/23wD3eAnJjgRmx2BqJm1br/fcf9ccddcbdd98568f08c71aac33e8a6/Rectangle_240644613.jpg" />
+              <img style="width: 32px; height: 40px; margin-right: 8px" src="https://images.ctfassets.net/r0lccig03c53/23wD3eAnJjgRmx2BqJm1br/fcf9ccddcbdd98568f08c71aac33e8a6/Rectangle_240644613.jpg" />
+              <span class="numberOfPeople">10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card fourth">
+        <p class="subheader">
+          Meeting • 16-01-2020 • Posted 3 mins ago • SalesMan
+        </p>
+        <h1 style="padding-top: 32px;">
+          Configure your bus
+        </h1>
+        <div>
+          <img style="margin: 0 auto; display: block;padding-top: 40px" src="https://images.ctfassets.net/r0lccig03c53/nrJOgoenuhUZyPr1SwJVg/345b568638da8b76fb7fed0eecf06a1d/photo_2019-12-02_11.30_1.jpg" />
+        </div>
+        <p style="text-transform: uppercase; padding-top: 95px;font-family: 'Arrival Mono';font-size: 11px;
+        line-height: 16px;">Launch configurator</p>
+      </div>
+
+
+      <div class="card fifth" style="display: flex;
+        flex-direction: column;
+        min-height: 100%;">
+        <div style="display: flex; justify-content: space-between; flex: 1 0 auto;">
+          <div>
+            <p class="subheader">
+              Meeting • 16-01-2020 • Posted 3 mins ago • SalesMan
+            </p>
+            <h2 style="padding-top: 32px;width: 80%;">
+              Meeting in our office about bus
+            </h2>
+            <h2 style="color:rgba(255, 255, 255, 0.3)">
+              17 Mar 2020, 10:30
+            </h2>
+          </div>
+          <div>
+            <img style="width: 44px; height: 66px" src="https://images.ctfassets.net/r0lccig03c53/7qzqTfGYRHfbarMpStBosp/e6425fdcca3ef16e3bea3cfce8198b9b/Rectangle_240644613.jpg" />
+
+          </div>
+        </div>
+        <div style="flex: 0 0 auto;">
+          <p class="text">
+            Hi Ben, it’s Serenity from Arrival. We would love to ask you a few
+            questions if you’re interested in partnership with us.
+          </p>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 36px">
+            <div style="    display: flex;
+            align-items: center;">
+              <img src="https://images.ctfassets.net/r0lccig03c53/53GwoP9CJgi5wXBGKMARK3/d9887c1ffc76521cf6f3b8cb5d62d3cc/Rectangle_240644622.svg" />
+              <span style="color: white; padding-left: 8px">24</span>
+            </div>
+            <div>
+              <img style="width: 32px; height: 40px; margin-right: 8px" src="https://images.ctfassets.net/r0lccig03c53/23wD3eAnJjgRmx2BqJm1br/fcf9ccddcbdd98568f08c71aac33e8a6/Rectangle_240644613.jpg" />
+              <img style="width: 32px; height: 40px; margin-right: 8px" src="https://images.ctfassets.net/r0lccig03c53/23wD3eAnJjgRmx2BqJm1br/fcf9ccddcbdd98568f08c71aac33e8a6/Rectangle_240644613.jpg" />
+              <img style="width: 32px; height: 40px; margin-right: 8px" src="https://images.ctfassets.net/r0lccig03c53/23wD3eAnJjgRmx2BqJm1br/fcf9ccddcbdd98568f08c71aac33e8a6/Rectangle_240644613.jpg" />
+              <img style="width: 32px; height: 40px; margin-right: 8px" src="https://images.ctfassets.net/r0lccig03c53/23wD3eAnJjgRmx2BqJm1br/fcf9ccddcbdd98568f08c71aac33e8a6/Rectangle_240644613.jpg" />
+              <span class="numberOfPeople">10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>
